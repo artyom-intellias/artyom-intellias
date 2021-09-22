@@ -34,10 +34,11 @@ jobs:
         
       - name: which python?
         run: |
+          . venv/bin/activate
           echo $(which python)
       - name: run tox
         run: |
-          tox
+          . venv/bin/activate
           tox
           
         
