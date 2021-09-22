@@ -26,8 +26,18 @@ jobs:
         with:
           python-version: '3.9'
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: debug print
+      - name: install tox
         run: |
           python -m venv venv
           . venv/bin/activate
           pip install tox
+        
+      - name: which python?
+        run: |
+          echo $(which python)
+      - name: run tox
+        run: |
+          tox
+          tox
+          
+        
